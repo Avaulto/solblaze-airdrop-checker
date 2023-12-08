@@ -1,0 +1,37 @@
+<header>
+  <div id="logo">
+    <img src="assets/bSOL-logo.png">
+    <div>BLZE airdrop checker</div>
+  </div>
+ <a class="solblaze-link" href="https://stake.solblaze.org/app/">
+  go to solblaze website
+</a>
+</header>
+
+<div id="container">
+
+  <div id="intro">
+    Check your weekly airdrop based on the amount of score you have on the SolBlaze website.
+  </div>
+  <small>airdrop may can change due to pool growth</small>
+
+    <div style="margin-block: 15px 10px;">
+      <input placeholder="Your wallet address" #input class="input"/>
+      
+      <button (click)="calcAirdrop(input.value)" >
+      check
+    </button>
+  </div>
+  
+  @if (airdrop() !== null) {
+
+    <div >
+      <div style="text-transform: capitalize;">your weekly airdrop is:</div>
+      <div>{{airdrop()}} <span>BLZE</span></div>
+    </div>
+  }
+</div>
+<span id="love">built with Love by <a href="https://www.SolanaHub.app" target="_blank">
+  <span id="logo">SolanaHub</span>
+  <img src="assets/solanahub-logo.svg" alt="solanhub logo"/></a>
+</span>
