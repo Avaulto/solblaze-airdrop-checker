@@ -1,7 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-
+import { inject } from '@vercel/analytics';
+inject({mode: "auto"});
+import va from '@vercel/analytics';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,6 +20,7 @@ export class AppComponent {
     const validatorScore = (await (await fetch('https://rewards.solblaze.org/api/v1/data')).json()).scores[address];
     const blzeAirdrop = (await (await fetch(`https://rewards.solblaze.org/api/v1/daily_rewards?score=${validatorScore}`)).json()).amount * 7;
     this.loading = false
+    va.track('fetch airdrop info');
     this.airdrop.set(blzeAirdrop);
   }
 }
