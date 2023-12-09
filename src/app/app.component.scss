@@ -22,7 +22,8 @@ header{
     }
 }
 #container{
-    max-width: 100%;
+
+    max-width: 95%;
     width: 800px;
     height: 500px;
     display: flex;
@@ -41,9 +42,17 @@ small{
     text-transform: capitalize;
     color: rgb(148 163 184);
 }
+#search-box{
+    margin-block: 15px 10px;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    max-width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .input {
-    margin-top: 1rem;
-    margin-inline: 20px;
+
     border-radius: 10px;
     outline: 2px solid #3b3e47;
     border: 0;
@@ -53,6 +62,7 @@ small{
     padding: 10px 12.5px;
     transition: all 0.2s ease;
     width: 350px;
+    max-width: 95%;
   }
   
   .input:hover {
@@ -83,4 +93,12 @@ small{
    
     color: #fff;
   }
-  
+  @media only screen and (max-width: 600px) {
+    #search-box{
+        justify-content: center;
+   
+    }
+    button {
+        margin-block: 10px;
+    };
+  }
