@@ -8,6 +8,7 @@ header{
         text-decoration: none;
         cursor: pointer;
         color: lightgray;
+        text-align: right;
         &:hover{
             color:aqua;
         }
@@ -88,11 +89,6 @@ small{
     text-transform: capitalize;
   }
   
-  button:hover {
-    background-color: #3b3e47;
-   
-    color: #fff;
-  }
   @media only screen and (max-width: 600px) {
     #search-box{
         justify-content: center;
