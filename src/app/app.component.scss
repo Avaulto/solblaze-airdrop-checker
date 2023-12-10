@@ -2,13 +2,12 @@ header{
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     text-transform: capitalize;
     a{
         text-decoration: none;
         cursor: pointer;
         color: lightgray;
-        text-align: right;
         &:hover{
             color:aqua;
         }
