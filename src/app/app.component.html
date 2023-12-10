@@ -7,7 +7,7 @@
   </div>
 <div style="text-align: right;">
 
-  <small>current score/blze ratio: 1/{{airdropRatio()}}</small>
+  <small>current score/blze ratio: 1/{{airdropRatio() | number: '1.2'}}</small>
 </div>
 
 </header>
@@ -34,7 +34,7 @@
 
     <div >
       <h3 style="color: aqua;font-weight: 500; text-transform: capitalize;">your weekly airdrop:</h3>
-      <div style="text-align: center;">{{airdrop()}} <span>$BLZE</span></div>
+      <div style="text-align: center;">{{airdrop() | number: '1.2'}} <span>$BLZE</span></div>
     </div>
   }
 </div>
